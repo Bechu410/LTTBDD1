@@ -69,7 +69,7 @@ fun MainScreen() {
 @Composable
 fun WelcomeScreen(navController: NavHostController){
     LaunchedEffect(Unit) {
-        delay(5000) // Chờ 5 giây
+        delay(3000)
         navController.navigate("screen1")
     }
 
@@ -110,7 +110,7 @@ fun ScreenFirst(navController: NavHostController){
         Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(start = 30.dp, end = 30.dp, top = 20.dp),
+                    .padding(start = 30.dp, end = 30.dp, top = 100.dp),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -142,7 +142,7 @@ fun ScreenFirst(navController: NavHostController){
                     contentColor = Color.White,
                 ),
                 modifier = Modifier
-                    .padding(top = 20.dp, bottom = 20.dp)
+                    .padding(top = 200.dp, bottom = 20.dp)
                     .fillMaxWidth(0.9f)
                     .height(50.dp),
 
@@ -320,30 +320,30 @@ fun ScreenThird(navController: NavHostController){
 
 
 
-//@Preview(showBackground = true)
-//@Composable
-//fun PreviewWelcomeScreen() {
-//    val navController = rememberNavController() // Khởi tạo navController giả lập
-//    WelcomeScreen(navController)
-//}
-//
-//@Preview(showBackground = true)
-//@Composable
-//fun PreviewScreenFirst() {
-//    val navController = rememberNavController()
-//    ScreenFirst(navController)
-//}
-//
-//@Preview(showBackground = true)
-//@Composable
-//fun PreviewScreenSecond() {
-//    val navController = rememberNavController()
-//    ScreenSecond(navController)
-//}
-//
-//@Preview(showBackground = true)
-//@Composable
-//fun PreviewScreenThird() {
-//    val navController = rememberNavController()
-//    ScreenThird(navController)
-//}
+@Preview(showBackground = true)
+@Composable
+fun PreviewWelcomeScreen() {
+    val navController = rememberNavController() // Khởi tạo navController giả lập
+    WelcomeScreen(navController)
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewScreenFirst() {
+    val navController = rememberNavController()
+    ScreenFirst(navController)
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewScreenSecond() {
+    val navController = rememberNavController()
+    ScreenSecond(navController)
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewScreenThird() {
+    val navController = rememberNavController()
+    ScreenThird(navController)
+}
